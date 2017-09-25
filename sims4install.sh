@@ -23,7 +23,7 @@ fi
 ls OriginThinClient.exe
 if [ "$?" -ne "0" ];
 then
-  wget www.dm.origin.com/download/legacy
+  wget www.dm.origin.com/download/legacy -O OriginThinClient.exe
 else
   echo origin thin already downloaded
 fi
@@ -53,7 +53,7 @@ fi
 #sudo apt-get install libntlm0-dev:i386 libwbclient0:i386
 sudo apt-get -y install samba winbind xinput
 
-wineconsole
+#wineconsole
 wine OriginThinClient.exe
 olddir=$(pwd)
 cd ~/.sims4/drive_c/Program\ Files/Origin
