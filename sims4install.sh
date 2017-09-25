@@ -20,6 +20,23 @@ else
   echo origin already downloaded
 fi
 
+ls OriginThinClient.exe
+if [ "$?" -ne "0" ];
+then
+  wget www.dm.origin.com/download/legacy
+else
+  echo origin thin already downloaded
+fi
+
+ls OriginUpdate.exe
+if [ "$?" -ne "0" ];
+then
+  wget origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginUpdate_9_12_0_34172.zip -o /dev/null -O OriginUpdate.exe
+  unzip OriginUpdate.zip
+else
+  echo origin thin already downloaded
+fi
+
 export WINEPREFIX=${HOME}/.sims4/
 export WINEARCH=win32
 winecfg
@@ -37,4 +54,7 @@ fi
 sudo apt-get -y install samba winbind xinput
 
 wineconsole
-#winedbg OriginSetup.exe
+wine OriginThinClient.exe
+olddir=$(pwd)
+cd ~/.sims4/drive_c/Program\ Files/Origin
+unzip $olddir/OriginUpdate.zip
