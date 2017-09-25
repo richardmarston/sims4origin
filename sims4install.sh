@@ -28,8 +28,11 @@ ls winetricks
 if [ "$?" -ne "0" ];
 then
   wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+  sh winetricks corefonts vcrun2010 vcrun2012 vcrun2013
 else
   echo winetricks already downloaded
 fi
 
-sh winetricks corefonts vcrun2010 vcrun2012 vcrun2013
+sudo apt-get install libapache2-mod-auth-ntlm-winbind:i386 libntlm0-dev:i386
+
+wine OriginSetup.exe
