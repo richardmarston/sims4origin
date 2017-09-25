@@ -6,7 +6,7 @@ then
   sudo apt-key add Release.key
   sudo apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/'
   sudo apt-get update
-  sudo apt-get install -y winehq-stable # --install-suggests
+  sudo apt-get install -y winehq-stable cabextract # --install-suggests
 else
   echo wine installed
 fi
@@ -28,9 +28,8 @@ ls winetricks
 if [ "$?" -ne "0" ];
 then
   wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-  chmod +x winetricks
 else
   echo winetricks already downloaded
 fi
 
-
+sh winetricks corefonts vcrun2010 vcrun2012 vcrun2013
