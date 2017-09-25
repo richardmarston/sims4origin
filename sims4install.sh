@@ -6,7 +6,7 @@ then
   sudo apt-key add Release.key
   sudo apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/'
   sudo apt-get update
-  sudo apt-get install -y winehq-stable cabextract # --install-suggests
+  sudo apt-get install -y --install-recommends winehq-devel cabextract # --install-suggests
 else
   echo wine installed
 fi
@@ -33,6 +33,8 @@ else
   echo winetricks already downloaded
 fi
 
-sudo apt-get install libapache2-mod-auth-ntlm-winbind:i386 libntlm0-dev:i386
+#sudo apt-get install libntlm0-dev:i386 libwbclient0:i386
+sudo apt-get install samba winbind xinput
 
-wine OriginSetup.exe
+wineconsole
+#winedbg OriginSetup.exe
