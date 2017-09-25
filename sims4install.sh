@@ -34,7 +34,7 @@ else
 fi
 
 #sudo apt-get install libntlm0-dev:i386 libwbclient0:i386
-sudo apt-get install samba winbind xinput
+sudo apt-get -y install samba winbind xinput
 
 wineconsole
 #winedbg OriginSetup.exe
