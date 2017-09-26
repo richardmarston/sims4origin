@@ -28,11 +28,10 @@ else
   echo origin thin already downloaded
 fi
 
-ls OriginUpdate.exe
+ls OriginUpdate.zip
 if [ "$?" -ne "0" ];
 then
-  wget origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginUpdate_9_12_0_34172.zip -o /dev/null -O OriginUpdate.exe
-  unzip OriginUpdate.zip
+  wget origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginUpdate_9_12_0_34172.zip -o /dev/null -O OriginUpdate.zip
 else
   echo origin thin already downloaded
 fi
@@ -54,7 +53,8 @@ fi
 sudo apt-get -y install samba winbind xinput
 
 #wineconsole
-wine OriginThinClient.exe
+#wine OriginThinClient.exe
 olddir=$(pwd)
 cd ~/.sims4/drive_c/Program\ Files/Origin
-unzip $olddir/OriginUpdate.zip
+unzip -o ${olddir}/OriginUpdate.zip
+cd ${olddir}
