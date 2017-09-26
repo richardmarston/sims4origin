@@ -6,11 +6,10 @@ then
   sudo apt-key add Release.key
   sudo apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/'
   sudo apt-get update
-  sudo apt-get install -y --install-recommends winehq-devel cabextract # --install-suggests
+  sudo apt-get install -y --install-recommends --install-suggests winehq-devel cabextract
 else
   echo wine installed
 fi
-#sudo apt-get install wine libntlm0 libgnutls-openssl27 libgnutls-dev
 
 ls OriginSetup.exe
 if [ "$?" -ne "0" ];
@@ -49,12 +48,24 @@ else
   echo winetricks already downloaded
 fi
 
-#sudo apt-get install libntlm0-dev:i386 libwbclient0:i386
 sudo apt-get -y install samba winbind xinput
 
-#wineconsole
-#wine OriginThinClient.exe
-olddir=$(pwd)
-cd ~/.sims4/drive_c/Program\ Files/Origin
-unzip -o ${olddir}/OriginUpdate.zip
-cd ${olddir}
+ls ${HOME}/.sims4/drive_c/Program\ Files/Origin/Origin.exe
+if [ "$?" -ne "0" ];
+then
+  wine OriginThinClient.exe || true
+else
+  echo origin thin client already installed
+fi
+
+ls ${HOME}/.sims4/drive_c/Program\ Files/Origin/OriginClientService.exe
+if [ "$?" -ne "0" ];
+then
+  olddir=$(pwd)
+  cd ~/.sims4/drive_c/Program\ Files/Origin
+  unzip -o ${olddir}/OriginUpdate.zip
+  cd ${olddir}
+else
+  echo origin update already installed
+fi
+
