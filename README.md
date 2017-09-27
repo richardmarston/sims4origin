@@ -24,5 +24,12 @@ Just type your password. If you want to check why it is asking for this access, 
 $ grep sudo originInstall.sh
 ```
 
-![Config screenshot](screenshots/WineConfig1.png?raw=true "Wine Configuration pt.1")
-![Config screenshot](screenshots/WineConfig2.png?raw=true "Wine Configuration pt.2")
+### Configure Wine to pretend to be Windows 7 instead of XP:
+###### Hover over the images for more detail
+![Config screenshot](screenshots/WineConfig1.png?raw=true "Change this screen")
+![Config screenshot](screenshots/WineConfig2.png?raw=true "..so it looks like this")
+
+### Accept the EULAs for some windows libraries:
+![Config screenshot](screenshots/VisualC%2B%2B2010.png?raw=true "Note that the agreement box is checked")
+![Config screenshot](screenshots/VisualC%2B%2B2012.png?raw=true "Note that the agreement box is checked")
+![Config screenshot](screenshots/VisualC%2B%2B2013.png?raw=true "Note that the agreement box is checked")
