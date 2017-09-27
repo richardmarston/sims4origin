@@ -1,12 +1,12 @@
 #!/bin/bash
-grep wine /etc/apt/sources.list.d/additional-repositories.list > /dev/null
+grep wine /etc/apt/sources.list > /dev/null
 if [ "$?" -ne "0" ];
 then
   wget https://dl.winehq.org/wine-builds/Release.key
   sudo apt-key add Release.key
   sudo apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/'
   sudo apt-get update
-  sudo apt-get install -y --install-recommends winehq-devel cabextract
+  sudo apt-get install -y --install-recommends winehq-stable cabextract
 else
   echo wine installed
 fi
@@ -22,7 +22,7 @@ fi
 ls OriginUpdate.zip &> /dev/null
 if [ "$?" -ne "0" ];
 then
-  wget origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginUpdate_9_12_0_34172.zip -o /dev/null -O OriginUpdate.zip
+  wget origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginUpdate_9_12_0_34172.zip -O OriginUpdate.zip
 else
   echo origin thin already downloaded
 fi
