@@ -34,12 +34,12 @@ $ grep sudo originInstall.sh
 ![Config screenshot](screenshots/VisualC%2B%2B2012.png?raw=true "Note that the agreement box is checked")
 ![Config screenshot](screenshots/VisualC%2B%2B2013.png?raw=true "Note that the agreement box is checked")
 
-### Accept the EULA for Origin
-![Config screenshot](screenshots/EULA1.png?raw=true "Accept this agreement too")
-
 ### Configure the Origin installation
 ![Config screenshot](screenshots/OriginConfig1.png?raw=true "Change this screen..")
 ![Config screenshot](screenshots/OriginConfig2.png?raw=true "..to look like this one")
+
+### Accept the EULA for Origin
+![Config screenshot](screenshots/EULA1.png?raw=true "Accept this agreement too")
 
 ### This Origin screen can just be closed because it isn't ready yet
 ![Config screenshot](screenshots/Origin1.png?raw=true "Just close this")
