@@ -1,4 +1,6 @@
 #!/bin/bash
+set -o errexit
+set -o nounset
 grep wine /etc/apt/sources.list > /dev/null
 if [ "$?" -ne "0" ];
 then
