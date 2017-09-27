@@ -45,7 +45,8 @@ $ grep sudo originInstall.sh
 ![Config screenshot](screenshots/Origin1.png?raw=true "Just close this")
 
 ### When the script has finished click on the Origin icon on the desktop
-###### It should have lost that warning now
+###### It should have lost that warning now so you can fill in the details and log in
+###### Check the save details box to avoid always having to fill it in
 ![Config screenshot](screenshots/Origin2.png?raw=true "Fill in your details on this one")
 
 ### Inside Origin, go to the Preferences menu
