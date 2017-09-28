@@ -6,7 +6,6 @@ set -o nounset
 export WINEPREFIX=${HOME}/.sims4
 export WINEARCH=win32
 export WINETRICKS_LOG=$WINEPREFIX/winetricks.log
-touch $WINETRICKS_LOG
 
 ORIGIN_UPDATE=OriginUpdate_9_12_0_34172.zip
 
@@ -41,6 +40,7 @@ then
   echo wine already configured
 else
   winecfg
+  touch $WINETRICKS_LOG
 fi
 
 if [ -e winetricks ];
